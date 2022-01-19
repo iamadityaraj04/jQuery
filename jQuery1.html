@@ -4,10 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>jQuery1</title>
 </head>
 <body>
-    
+    <div class="class1">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nesciunt, blanditiis nisi autem odio tempora eum, dolor sit ut odit veritatis ea, repellat accusantium consequatur! Consequuntur sequi doloribus laudantium maiores!</span>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, alias.</p>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam aspernatur tenetur provident maxime earum voluptas saepe nisi. Ad voluptates doloremque voluptatum sit, labore eius! Voluptatibus earum laborum saepe nobis maiores, distinctio totam necessitatibus excepturi consequatur, possimus iure ut quae, dolorum deserunt suscipit? Quia.\</p>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At tempore quia illum dolore! Ipsa ducimus cupiditate deserunt assumenda sit, fugiat tempora odit distinctio quae perferendis perspiciatis? Laudantium perspiciatis libero dolor dolorem fuga eius omnis cum. Qui at delectus sint, est, commodi recusandae non cumque distinctio iure illo fugit perspiciatis hic perferendis deserunt ducimus ipsam dolores porro. Pariatur a consectetur alias totam sequi. Magnam nam repellat itaque hic quam. Repellat voluptates in praesentium, possimus, magni inventore sed nam animi alias quibusdam accusantium nemo. Aspernatur unde debitis veniam atque, id nemo amet explicabo maiores nostrum magnam, esse ex quo optio nisi vero assumenda adipisci ea nesciunt tenetur dolore voluptatibus consequuntur. Veniam iure quae culpa delectus consequatur illo rerum doloremque odit molestiae eaque. At, sequi, necessitatibus consequuntur explicabo tempore iure earum sint vero quia cumque fuga molestias doloribus est, dolores neque harum magnam esse laudantium distinctio. Quam quasi sunt est magni officia recusandae distinctio! Laudantium, saepe? Cum exercitationem consequatur officiis hic dignissimos magni officia mollitia ut soluta voluptates sequi corrupti unde quae ipsum excepturi delectus rerum sint omnis, corporis et voluptatibus impedit quaerat? Cum consequatur a dolorum tenetur. Nisi, cupiditate ex! Laudantium, mollitia quod dicta omnis, consequatur reprehenderit nihil impedit eligendi ea provident aliquid velit eveniet perspiciatis. Nesciunt quaerat rerum natus adipisci delectus ullam nulla, sequi iste esse pariatur ea expedita, officia maiores omnis ducimus sunt voluptatem id maxime earum minima corporis ut deleniti? Natus, nobis vel?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit voluptatem culpa nihil laborum enim nam assumenda non, molestiae blanditiis minima consectetur quam modi totam quas voluptatibus veniam reiciendis iure? Velit iusto nam eligendi perferendis magni similique eos! Reprehenderit reiciendis sapiente deserunt qui illum. Atque unde rerum dignissimos ipsa quis minima consequuntur quo a neque voluptatum ipsum, cumque at blanditiis temporibus provident veniam, repellat eius error. Fugit nobis facilis temporibus ipsam harum inventore tempora, explicabo quo, rem quibusdam itaque voluptatum ut soluta aliquid? Dignissimos vitae quia fugit ipsum possimus. Deserunt, commodi.</p>
+    <script>
+        // Selectors
+        $(document).ready(function () {
+            // to target class
+           $(".class1").css("background-color","yellow");
+           
+            // to target tag
+           $("p").css("background-color","lightgreen");
+
+        //multiple css properties
+           $("p").css({
+               "width":"500px",
+               "font-size":"20px",
+               "padding": "10px "
+           });
+           
+        //to select first and the last tag
+           $("p:first").css("background-color","lightpink");
+           $("p:last").css("background-color","lightblue");
+
+        // to targe list in even or odd no.
+            $("li:even").css("background-color","lightgrey");
+            $("li:odd").css("background-color","gold");
+        });
+
+    </script>
 </body>
 </html>
