@@ -1,0 +1,72 @@
+<!-- jQuery Mouse Events -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Mouse Events</title>
+</head>
+<body>
+    <div class="class1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt libero impedit expedita recusandae obcaecati eius iste corporis ex maxime ducimus. Natus, quis delectus?
+    </div>
+    <br><br><br>
+    <div class="class2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt libero impedit expedita recusandae obcaecati eius iste corporis ex maxime ducimus. Natus, quis delectus?
+    </div>
+    <button id="btn1">Button 1</button>
+    <br><br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam harum reprehenderit illum et. Ab voluptate, odio itaque optio, exercitationem reprehenderit distinctio minima eaque velit ratione commodi mollitia voluptatum aperiam iste!</p>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").css({
+                "width":"80px",
+                "height":"30px",
+                "background-color":"lightblue",
+                "border-radius":"5px",
+                "cursor":"pointer",
+            })
+            // click event
+            $("#btn1").click(function(){
+                $(".class1").css("background-color","lightpink");
+            });
+            
+            //double click event 
+            $("#btn1").dblclick(function(){
+                $(".class2").css("background-color","lightgreen");
+            });
+            //contextmenu event(right click)
+            $("#btn1").contextmenu(function(){
+                $("div").css("background-color","lightblue");
+            });
+            
+            //hover event
+            $("#btn1").hover(function(){
+                $(this).css("background-color","yellow");
+            });
+            
+            //mouseenter event
+            $("p").mouseenter(function(){
+                $(this).css("background-color","green");
+            });
+            
+            //mouseleave event 
+            $("p").mouseleave(function(){
+                $(this).css("background-color","red");
+            });
+            $("p").mousedown(function(){
+                $(this).css("background-color","white");
+            });
+            $("p").mouseup(function(){
+                $(this).css("background-color","purple");
+            });
+
+
+            
+        });
+    </script>
+</body>
+</html>
