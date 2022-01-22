@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Form Events</title>
+</head>
+<body>
+    <h1>Form Events</h1><br><br><br>
+    <form action="" id="form">
+        <label for="">Firstname: </label><input type="text"><br><br>
+        <label for="">Lastname: </label><input type="text"><br><br>
+        <label for="">Age: </label><input type="number"><br><br>
+        <label for="">State: </label>
+        <select name="" id="">
+            <option value="Bihar">Bihar</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Himachal Pradesh">Himacahal Pradesh</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Assam">Assam</option>
+            <option value="Keral">Keral</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Goa">Goa</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Gujraj">Gujraj</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Uttrakhand">Uttrakhand</option>
+        </select> <br><br>
+        
+        <input type="submit" id="submit">
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            // focus()
+            $("input").focus(function(){
+                $(this).css("background-color", "lightgreen");
+            });
+            
+            //blur() 
+            $("input").blur(function(){
+                $(this).css("background-color", "white");
+            });
+            
+            //select) 
+            $("input").select(function(){
+                $(this).css("background-color", "yellow");
+            });
+            //blur() 
+            $("input").blur(function(){
+                $(this).css("background-color", "white");
+            });
+
+            // submit()
+            $("#form").submit(function(){
+                alert("Form Successfully Submitted!");
+            });
+        });
+    </script>
+</body>
+</html>
