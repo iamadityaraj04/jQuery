@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Get Methods</title>
+</head>
+<body>
+    <h1>Methods</h1>
+
+    <h2>html() Click on para</h2>
+    <div id="div1">Lorem ipsum dolor sit, <b>amet consectetur adipisicing elit.</b>Nulla sed, omnis iusto officia minus numquam cumque eveniet facilis possimus aperiam corporis tenetur sequi ratione molestiae culpa! Quis esse magni illum possimus nam, inventore placeat. Reprehenderit.</div>
+    <br><br>
+    <h2>text()</h2>
+    <div id="div2">Lorem ipsum dolor sit, <b>amet consectetur adipisicing elit.</b>Nulla sed, omnis iusto officia  <u>minus numquam</u> cumque eveniet facilis possimus aperiam corporis tenetur sequi ratione molestiae culpa! Quis esse magni illum possimus nam, inventore placeat. Reprehenderit.</div>
+    <br><br>
+    <h2>attr()</h2>
+    <p style="color: blueviolet;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quae laboriosam consequuntur maxime sed ducimus eveniet quas tempore reprehenderit, et tenetur placeat voluptatum reiciendis molestiae soluta doloremque praesentium, ab unde!</p>
+    <br><br>
+    <h2>val()</h2>
+    <form action="">
+        <label for="">Name: </label><input type="text" id="name"><br><br>
+        <label for="">Age: </label><input type="text" id="age"><br><br>
+        <input type="submit" id="submit">
+    </form>
+    <script>
+        $(document).ready(function(){
+            // html()
+            $("#div1").click(function(){
+                var a=$('#div1').html();
+                alert(a);
+            });
+
+            // text()
+            $("#div2").click(function(){
+                var b=$('#div2').text();
+                alert(b);
+            });
+            
+            // attr()
+            $("p").click(function(){
+                var c=$('p').attr('style');
+                alert(c);
+            });
+           
+            // val()
+            $("#submit").click(function(){
+                var name=$("#name").val();
+                var age=$("#age").val();
+                alert("Hi! "+name+" you are "+age+" years old.");
+            });
+            
+
+        });
+    </script>
+</body>
+</html>
