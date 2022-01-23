@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Effects</title>
+</head>
+<body>
+    <h1>Effects</h1>
+    
+    <h1>Hide</h1>
+    <div id="div1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas vitae iure asperiores! Qui, nemo inventore. Ipsa dicta reiciendis eligendi quas omnis veritatis sapiente architecto aliquid. Debitis est reprehenderit expedita ratione voluptas voluptatibus corrupti quod fugit hic impedit et accusantium neque saepe, possimus exercitationem, voluptatum libero nulla rerum qui cupiditate illum ex laboriosam distinctio? Voluptate sed ipsum doloribus repudiandae nulla. Necessitatibus?</div>
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+    <br><br>
+    
+    <div id="div2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas vitae iure asperiores! Qui, nemo inventore. Ipsa dicta reiciendis eligendi quas omnis veritatis sapiente architecto aliquid. Debitis est reprehenderit expedita ratione voluptas voluptatibus corrupti quod fugit hic impedit et accusantium neque saepe, possimus exercitationem, voluptatum libero nulla rerum qui cupiditate illum ex laboriosam distinctio? Voluptate sed ipsum doloribus repudiandae nulla. Necessitatibus?</div>
+    <button id="btn3">Hide/Show</button>
+    <br><br>
+    
+    <h1>Fade</h1>
+    <div id="div3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas vitae iure asperiores! Qui, nemo inventore. Ipsa dicta reiciendis eligendi quas omnis veritatis sapiente architecto aliquid. Debitis est reprehenderit expedita ratione voluptas voluptatibus corrupti quod fugit hic impedit et accusantium neque saepe, possimus exercitationem, voluptatum libero nulla rerum qui cupiditate illum ex laboriosam distinctio? Voluptate sed ipsum doloribus repudiandae nulla. Necessitatibus?</div>
+    <button id="btn4">FadeIn</button>
+    <button id="btn5">FadeOut</button>
+    <br><br>
+    
+    <div id="div4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas vitae iure asperiores! Qui, nemo inventore. Ipsa dicta reiciendis eligendi quas omnis veritatis sapiente architecto aliquid. Debitis est reprehenderit expedita ratione voluptas voluptatibus corrupti quod fugit hic impedit et accusantium neque saepe, possimus exercitationem, voluptatum libero nulla rerum qui cupiditate illum ex laboriosam distinctio? Voluptate sed ipsum doloribus repudiandae nulla. Necessitatibus?</div>
+    <button id="btn6">FadeIn/FadeOut</button>
+    <button id="btn7">FadeTo</button>
+    <br><br>
+    
+    <h1>Slide</h1>
+    <button id="btn8">slideUp</button>
+    <button id="btn9">slideDown</button>
+    <button id="btn10">slideToggle</button><br>
+    <div id="div6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas vitae iure asperiores! Qui, nemo inventore. Ipsa dicta reiciendis eligendi quas omnis veritatis sapiente architecto aliquid. Debitis est reprehenderit expedita ratione voluptas voluptatibus corrupti quod fugit hic impedit et accusantium neque saepe, possimus exercitationem, voluptatum libero nulla rerum qui cupiditate illum ex laboriosam distinctio? Voluptate sed ipsum doloribus repudiandae nulla. Necessitatibus?</div><br>
+    <br><br>
+    
+    <h1>Animation</h1>
+    <button id="btn11">Start Animation</button><br><br>
+    <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>  
+
+    <script>
+        $(document).ready(function(){
+            // hide()
+            $("#btn1").click(function(){
+                $("#div1").hide();
+            });
+            
+            // show()
+            $("#btn2").click(function(){
+                $("#div1").show();
+            });
+            
+            // hide/show toggle
+            $("#btn3").click(function(){
+                $("#div2").toggle();
+            });
+            
+            // fadeIn()
+            $("#btn4").click(function(){
+                $("#div3").fadeIn();
+            });
+            
+            // fadeOut()
+            $("#btn5").click(function(){
+                $("#div3").fadeOut();
+            });
+            
+            // fadeIn/fadeOut toggle
+            $("#btn6").click(function(){
+                $("#div4").fadeToggle();
+            });
+           
+            // fadeTo()
+            $("#btn7").click(function(){
+                $("#div4").fadeTo("slow",0.5);
+            });
+            
+            // slideUp()
+            $("#btn8").click(function(){
+                $("#div6").slideUp("slow");
+            });
+            
+            // slideDown()
+            $("#btn9").click(function(){
+                $("#div6").slideDown("slow");
+            });
+            
+            // slideToggle()
+            $("#btn10").click(function(){
+                $("#div6").slideToggle("slow");
+            });
+            
+            // animate()
+            $("button").click(function(){  
+                $("div").animate({right: '0px'});  
+            }); 
+        });
+    </script>
+</body>
+</html>
