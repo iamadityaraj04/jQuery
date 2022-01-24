@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>On/Off Methods</title>
+</head>
+<body>
+    <h1>On/Off Methods</h1><br><br>
+    <div id="div1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ab reprehenderit esse perferendis modi molestiae debitis pariatur eum earum minus maxime, nobis dolorum, perspiciatis quis asperiores hic aliquam vitae ipsa! Velit, unde quas sint id at illo quasi voluptatem reprehenderit, odio laboriosam eveniet deleniti suscipit veniam accusantium corrupti enim maiores perspiciatis minima laborum error modi. Aut incidunt cumque, quod minima aspernatur fugit, veritatis necessitatibus repudiandae nobis voluptatem iusto dolores tempora ducimus at quam dignissimos possimus hic officia nemo quo rerum quaerat! Odio deserunt earum nam ullam sint esse nihil quia.
+    </div><br><br>
+    <button id="btn1">Off Method</button>
+    
+    <script>
+        $(document).ready(function(){
+            $("#div1").css({
+                "width": "400px",
+                "height": "200px",
+                "font-size": "12px",
+                "border": "3px solid grey",
+                "padding": "5px"
+            });
+
+            // on()
+            $("#div1").on({
+                "click": function(){
+                    $(this).css({
+                        "width": "700px",
+                        "height": "600px",
+                        "font-size": "30px",
+                        "background-color": "grey",
+                    });
+                },
+                "mouseover": function(){
+                    $(this).css("background-color","lightgreen");
+                },
+                "mouseout": function(){
+                    $(this).css("background-color","orange");
+                },
+            });
+
+            // off()
+            $("#btn1").click(function(){
+                $("#div1").off("mouseover mouseout");
+            });
+        });
+    </script>
+</body>
+</html>
