@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Append & Prepend Methods</title>
+</head>
+<body>
+    <h1>Append & Prepend Methods</h1>
+    <div id="div1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat incidunt consequuntur nihil magnam quia, facilis eos iste perspiciatis! Explicabo perspiciatis consectetur ut amet, expedita itaque ullam obcaecati ipsam et eum!
+
+    </div><br><br>
+    <button id="btn1">Append</button>    
+    <button id="btn2">Prepend</button>    
+
+    <script>
+        $(document).ready(function(){
+            $("#div1").css({
+                "width":"400px",
+                "height":"200px",
+                "background-color":"lightgreen"
+            });
+
+
+            //append(): it will add element at the end
+            $("#btn1").click(function(){
+                $("#div1").append("<h3>Hello! Everyone.</h3>");
+            });
+            //prepend(): it will add element at the beginning 
+            $("#btn2").click(function(){
+                $("#div1").prepend("<h3>Hello! Everyone.</h3>");
+            });
+        });
+    </script>
+</body>
+</html>
