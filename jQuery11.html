@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Method Chaining</title>
+</head>
+<body>
+   <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro similique, doloremque nisi excepturi officia reiciendis ullam minima quisquam ab aperiam, animi eveniet, odit non? At aliquam magnam ex debitis voluptates, ipsa maxime architecto quidem veniam deserunt eos, suscipit sint nobis, nihil sapiente quaerat ducimus inventore eum sed laborum obcaecati quos fuga! Quo dolorem dignissimos fugiat officia modi facilis distinctio est ut, voluptatem nulla a natus, sit, repellat corrupti dicta? Laborum a nulla, sapiente qui quas ab!</div>
+    <button> Click me </button>  
+    <p id = "para"></p>  
+    <script>
+        $(document).ready(function(){  
+            $("button").click(function(){  
+                 $("div").css("background-color","lightgreen").slideUp().slideDown(1000);//1000 is time for animation
+            });  
+        });  
+    </script>
+</body>
+</html>
