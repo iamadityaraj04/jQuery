@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ancestor Method</title>
+    <style>
+    .ancestors * { 
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Ancestor Method</h1><!--  method used for targeting parent or grand parent element through child element -->
+    <div class="ancestors">
+        <div style="width:500px;">div (great-grandparent)
+          <ul style="position:relative;">ul (grandparent)  
+            <li>li (direct parent)
+              <span >span</span>
+            </li>
+          </ul>   
+        </div>
+      </div>
+      <button id="btn1">Parent</button>
+      <button id="btn2">Parents</button>
+      <button id="btn3">ParentsUntil</button>
+      <button id="btn4">Closest</button>
+      <button id="btn5">offsetParent</button>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){ 
+                $("span").parent().css({  //for parent element
+                    "color": "red",
+                    "border": "2px solid red"
+                });
+            });
+            $("#btn2").click(function(){
+                $("span").parents().css({ // for all the parent like parent, grandparents, great-grandparents
+                    "color": "red",
+                    "border": "2px solid red"
+                });
+            });
+            $("#btn3").click(function(){
+                $("span").parentsUntil('div').css({ //for all parent unitil the given parameter i.e div 
+                    "color": "red",
+                    "border": "2px solid red"
+                });
+            });
+            $("#btn4").click(function(){
+                $("span").closest('li').css({ //for targeting closeset element
+                    "color": "red",
+                    "border": "2px solid red"
+                });
+            });
+            $("#btn5").click(function(){
+                $("span").offsetParent().css({ //for targeting element whose position is relative
+                    "color": "red",
+                    "border": "2px solid red"
+                });
+            });
+        });
+    </script>
+</body>
+</html>
