@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Filtering Methodst</title>
+    <style>
+        #first, #second{
+            padding: 10px;
+            margin: 8px;
+            font-size: 18px;
+            width: 500px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery filtering method</h1>
+
+    <div id="first" style="background-color: aquamarine;">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum voluptatibus, temporibus voluptate doloribus, cum minima architecto adipisci quisquam aut consectetur voluptas quis. Aperiam vel alias asperiores dolorem vero deserunt excepturi?
+        </p>
+    </div>
+
+    <ul>
+        <li>Ford</li>
+        <li>Toyota</li>
+        <li>Suzuki</li>
+        <li>Tata</li>
+        <li>Nissan</li>
+    </ul>
+
+    <div id="second" style="background-color: antiquewhite;">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, assumenda. Esse blanditiis vel molestiae, dicta officiis ipsum, ex totam veniam pariatur illum nostrum.
+        </p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            //will select first p of file
+            $("p").first().css("background-color", "brown");
+            
+            //will select last p of file
+            $("p").last().css("background-color", "pink");
+            
+            //will select with index in ().
+            $("ul li").eq(1).css("background-color", "pink");
+            //will target from last
+            $("ul li").eq(-1).css("background-color", "silver");
+
+            $("ul li").slice(2,4).css("background-color", "gold");
+
+        });
+    </script>
+</body>
+</html>
